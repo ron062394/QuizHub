@@ -1,65 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizHub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <h1>QuizHub</h1>
-    <div>
-        <h2>Select a Topic</h2>
-        <ol id="topics">
-            <li data-topic="Mastering CLI">Mastering CLI</li>
-            <li data-topic="Git & GitHub">Git & GitHub</li>
-            <li data-topic="HTML">HTML</li>
-            <li data-topic="CSS Basics">CSS Basics</li>
-            <li data-topic="Intermediate CSS">Intermediate CSS</li>
-            <li data-topic="JavaScript Basics">JavaScript</li>
-            <li data-topic="DOM Manipulation">DOM Manipulation</li>
-        </ol>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <h1 class="title">Quiz <span>Hub</span></h1>
+        <h2>Please Select a Topic</h2>
+      </div>
     </div>
-    <hr>
-    <div>2024 @ ron.TheVeloper | Onecodecamp | <a style="display: inline;" href="mailto:ron062394@gmail.com">Send Feedback</a></div> 
 
+    <div>
+      <ol id="topics">
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>Mastering CLI</h3>
+            <div class="score-info" id="CLI">
+              <span class="strong">COMPLETION RATE: 0%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              Welcome to the Mastering CLI quiz! In this section, you'll immerse
+              yourself in the world of command line interface (CLI) usage.
+              Explore a comprehensive range of commands and advanced techniques
+              designed to enhance your workflow efficiency and automate tasks.
+            </p>
+            <div class="quiz-button" data-topic="Mastering CLI">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
 
-    <script>
-        const topicCodes = {
-            "Mastering CLI": "CLI123",
-            "Git & GitHub": "GIT456",
-            "HTML": "HTML789",
-            "CSS Basics": "CSS101",
-            "Intermediate CSS": "CSS202",
-            "JavaScript Basics": "LOG303",
-            "DOM Manipulation": "DOM404",
-        };
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>Git & GitHub</h3>
+            <div class="score-info" id="GIT">
+              <span class="strong">COMPLETION RATE: 0%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              Step into the Git & GitHub quiz zone. Dive deep into the
+              fundamentals of Git version control system and GitHub
+              collaboration platform, mastering essential commands and best
+              practices for effective software development and version
+              management.
+            </p>
+            <div class="quiz-button" data-topic="Git & GitHub">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
 
-        document.getElementById('topics').addEventListener('click', function(event) {
-            if (event.target.tagName === 'LI') {
-                const topic = event.target.getAttribute('data-topic');
-                const enteredCode = prompt(`Enter the code to access the ${topic} quiz:`);
-                const correctCode = topicCodes[topic];
-                console.log(correctCode)
-                console.log(enteredCode)
-                if (enteredCode === correctCode) {
-                    window.location.href = `dashboard.html?topic=${encodeURIComponent(topic)}`;
-                } else {
-                    alert('Incorrect code. Please try again.');
-                }
-            }
-        });
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>HTML</h3>
+            <div class="score-info" id="HTML">
+              <span class="strong">COMPLETION RATE: 0%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              HTML quiz extravaganza! Embark on a journey through the
+              foundational principles of web development with Hypertext Markup
+              Language (HTML). Dive into the world of best practices as you
+              learn to craft well-structured and visually appealing web content.
+            </p>
+            <div class="quiz-button" data-topic="HTML">TAKE THE QUIZ ></div>
+          </div>
+        </li>
 
-        document.addEventListener('contextmenu', function(e) {
-              e.preventDefault();
-            });
-          
-            document.addEventListener('keydown', function(e) {
-              if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || (e.ctrlKey && e.keyCode == 85)) {
-                e.preventDefault();
-              }
-            });
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>CSS Basics</h3>
+            <div class="score-info" id="CSS1">
+              <span class="strong">COMPLETION RATE: 0%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              Show your creativity in the CSS quiz challenge! Immerse yourself
+              in the art of web design as you explore the fundamentals of
+              Cascading Style Sheets. From basic styling techniques to advanced
+              layout strategies, transform your design visions into reality with
+              ease.
+            </p>
+            <div class="quiz-button" data-topic="CSS Basics">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>Intermediate CSS</h3>
+            <div class="score-info" id="CSS2">
+              <span class="strong">COMPLETION RATE: 100%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              From flexbox and grid layouts to implementing CSS preprocessors
+              for modular and maintainable code, you'll discover a treasure
+              trove of techniques and best practices to create visually stunning
+              and responsive web designs.
+            </p>
+            <div class="quiz-button" data-topic="Intermediate CSS">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>JavaScript</h3>
+            <div class="score-info" id="JS">
+              <span class="strong">COMPLETION RATE: 0%</span>
+              <span class="strong">SCORE: 0/10</span>
+            </div>
+            <p>
+              Explore the fundamentals of JavaScript programming language, from
+              variables and data types to control structures and DOM
+              manipulation. Unlock the power to create dynamic and interactive
+              web applications that respond to user input in real-time.
+            </p>
+            <div class="quiz-button" data-topic="JavaScript Basics">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="header-design"></div>
+          <div class="topic-desc">
+            <h3>DOM Manipulation</h3>
+            <div class="score-info" id="DOM">
+              <span class="strong completion-rate">COMPLETION RATE: 0%</span>
+              <span class="strong score">SCORE: 0/10</span>
+            </div>
+            <p>
+              Delve into Document Object Model (DOM) manipulation techniques in
+              JavaScript as you master the art of creating responsive and
+              interactive web experiences. From traversing the DOM tree to
+              modifying content, you'll learn to harness the full potential of
+              DOM.
+            </p>
+            <div class="quiz-button" data-topic="DOM Manipulation">
+              TAKE THE QUIZ >
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <hr />
+    <div>
+      2024 @ ron.TheVeloper | Onecodecamp |
+      <a style="display: inline" href="mailto:ron062394@gmail.com"
+        >Send Feedback</a
+      >
+    </div>
+
+    <script src="./app.js">
+
     </script>
-</body>
+  </body>
 </html>

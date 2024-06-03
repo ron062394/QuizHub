@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #ffdeb5, #ffcea5);
+    background: rgb(236, 236, 236);
     height: 100%;
     width: 100%;
     overflow-x: hidden;
@@ -10,20 +10,123 @@ body {
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* Main */
 ol {
     list-style-type: none;
     padding: 0;
 }
-li {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    transition: background-color 0.3s;
+
+#topics {
+    display: flex;
+    flex-wrap: wrap;
 }
-li:hover {
-    background-color: #f0f0f0;
+
+#topics li {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    display: inline ;
+    margin: 1rem;
+    border-radius: 10px;
 }
-div, h1 {
-    text-align: center;
+
+
+.title {
+    color: #ffffff;
+}
+
+.title span{
+    color: #0085FF;
+}
+
+.header {
+    height: 40vh;
+    background-image: url("https://www.um.edu.mt/__data/assets/image/0004/364135/varieties/banner.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    padding: 0 2rem;
+}
+
+.header h2 {
+    color: white;
+}
+
+.header .title {
+    font-size: 4rem;
+}
+
+.header-design {
+    background: linear-gradient(to bottom, #192a56, #000000);
+    height: 5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.topic-desc {
+    margin: 0 1rem;
+}
+
+.topic-desc h3 {
+    color: #0085FF;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.quiz-button {
+    text-align: end;
+    color: #0085FF;
+    font-weight: bold;
+}
+
+.quiz-button:hover {
+    text-decoration: underline;
+}
+
+.score-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-btn {
+    background-color: #0085FF;
+    color: white;
+    border: 0;
+    border-radius: 2px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+#quiz-content {
+    background: #ffffff;
+    margin: 7vh auto;
+    border-radius: 5px;
+    padding: 2rem 0 0 5rem;
+    margin: 5vh 20vw;
+}
+
+.question-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.summary-list {
+    background-color: #bebebe;
+}
+
+.summary-list li {
+    background-color: white;
+    margin-bottom: 1rem;
 }
