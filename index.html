@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>QuizHub</h1>
+    <div>
+        <h2>Select a Topic</h2>
+        <ol id="topics">
+            <li data-topic="Mastering CLI">Mastering CLI</li>
+            <li data-topic="Git & GitHub">Git & GitHub</li>
+            <li data-topic="HTML">HTML</li>
+            <li data-topic="CSS Basics">CSS Basics</li>
+            <li data-topic="Intermediate CSS">Intermediate CSS</li>
+            <li data-topic="JS">JS</li>
+            <li data-topic="DOM Manipulation">DOM Manipulation</li>
+        </ol>
+    </div>
+    <hr>
+    <div>@ron.TheDeveloper | Onecodecamp</div>
+
+    <script>
+        const topicCodes = {
+            "Mastering CLI": "CLI123",
+            "Git & GitHub": "GIT456",
+            "HTML": "HTML789",
+            "CSS Basics": "CSS101",
+            "Intermediate CSS": "CSS202",
+            "JS": "JS303",
+            "DOM Manipulation": "DOM404"
+        };
+
+        document.getElementById('topics').addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                const topic = event.target.getAttribute('data-topic');
+                const enteredCode = prompt(`Enter the code to access the ${topic} quiz:`);
+                const correctCode = topicCodes[topic];
+
+                if (enteredCode === correctCode) {
+                    // Replace 'dashboard.html' with the actual path to your quiz dashboard page
+                    window.location.href = `dashboard.html?topic=${encodeURIComponent(topic)}`;
+                } else {
+                    alert('Incorrect code. Please try again.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
