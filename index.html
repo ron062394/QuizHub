@@ -17,7 +17,7 @@
             <li data-topic="HTML">HTML</li>
             <li data-topic="CSS Basics">CSS Basics</li>
             <li data-topic="Intermediate CSS">Intermediate CSS</li>
-            <li data-topic="JS">JS</li>
+            <li data-topic="JavaScript Basics">JS</li>
             <li data-topic="DOM Manipulation">DOM Manipulation</li>
         </ol>
     </div>
@@ -31,8 +31,8 @@
             "HTML": "HTML789",
             "CSS Basics": "CSS101",
             "Intermediate CSS": "CSS202",
-            "JS": "JS303",
-            "DOM Manipulation": "DOM404"
+            "JavaScript Basics": "LOG303",
+            "DOM Manipulation": "DOM404",
         };
 
         document.getElementById('topics').addEventListener('click', function(event) {
@@ -40,9 +40,9 @@
                 const topic = event.target.getAttribute('data-topic');
                 const enteredCode = prompt(`Enter the code to access the ${topic} quiz:`);
                 const correctCode = topicCodes[topic];
-
+                console.log(correctCode)
+                console.log(enteredCode)
                 if (enteredCode === correctCode) {
-                    // Replace 'dashboard.html' with the actual path to your quiz dashboard page
                     window.location.href = `dashboard.html?topic=${encodeURIComponent(topic)}`;
                 } else {
                     alert('Incorrect code. Please try again.');
