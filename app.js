@@ -1,11 +1,11 @@
 const topicCodes = {
     "Mastering CLI": "CLI123",
-    "Git & GitHub": "GIT456",
-    HTML: "HTML789",
+    "Git & GitHub": "OCTOCAT",
+    HTML: "DOCTYPE",
     "CSS Basics": "CSS101",
-    "Intermediate CSS": "CSS202",
-    "JavaScript Basics": "LOG303",
-    "DOM Manipulation": "DOM404",
+    "Intermediate CSS": "RWD201",
+    "JavaScript Basics": "JSLINGO",
+    "DOM Manipulation": "JSDOM",
   };
 
   const buttons = document.querySelectorAll(".quiz-button");

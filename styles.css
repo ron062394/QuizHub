@@ -113,8 +113,9 @@ ul li {
     background: #ffffff;
     margin: 7vh auto;
     border-radius: 5px;
-    padding: 2rem 0 0 5rem;
-    margin: 5vh 20vw;
+    padding: 2rem 5rem;
+    margin: 5vh 15vw;
+    
 }
 
 .question-label {
@@ -124,6 +125,7 @@ ul li {
 
 .summary-list {
     background-color: #bebebe;
+    padding: 1rem;
 }
 
 .summary-list li {
@@ -145,3 +147,15 @@ ul li {
 .orange {
     color: rgb(246, 170, 29);
 }
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

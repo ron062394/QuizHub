@@ -557,12 +557,9 @@ function loadQuiz(topic) {
   let currentQuestionIndex = 0;
   const userAnswers = [];
 
-  function saveScoreToLocalStorage(score) {
-    localStorage.setItem(topic, score);
-  }
 
   function showSummary() {
-    quizContent.innerHTML = "<h2>Quiz Summary</h2>";
+    quizContent.innerHTML = "<span></span>";
     const summaryList = document.createElement("ul");
     let score = 0;
     selectedQuestions.forEach((questionObj, index) => {
@@ -601,13 +598,29 @@ function loadQuiz(topic) {
       summaryList.appendChild(summaryItem);
       summaryList.classList.add("summary-list");
     });
+    
+    const scoreContainer = document.createElement("div");
+    scoreContainer.classList.add("center")
+    
+
+    const congratsElement = document.createElement("h2");
+    congratsElement.textContent = `Congratulations!`
+    congratsElement.classList.add("text-center")
+    scoreContainer.appendChild(congratsElement);
+
+    const congratsParag = document.createElement("p");
+    congratsParag.textContent = `You scored:`
+    scoreContainer.appendChild(congratsParag);
+
 
     const scoreElement = document.createElement("p");
-    scoreElement.textContent = `You scored ${score} out of ${selectedQuestions.length}`;
-    quizContent.appendChild(scoreElement);
-    quizContent.appendChild(summaryList);
+    scoreElement.textContent = `${score}/${selectedQuestions.length}`;
+    scoreContainer.appendChild(scoreElement);
 
-    localStorage.setItem(topic, score);
+    quizContent.appendChild(scoreContainer);
+
+    const btnContainer = document.createElement("div");
+    quizContent.appendChild(btnContainer);
 
     const retakeButton = document.createElement("button");
     retakeButton.textContent = "Retake Quiz";
@@ -616,14 +629,20 @@ function loadQuiz(topic) {
       userAnswers.length = 0;
       renderQuestion();
     });
-    quizContent.appendChild(retakeButton);
+    btnContainer.appendChild(retakeButton);
+    btnContainer.classList.add("btns-container")
 
     const homeButton = document.createElement("button");
     homeButton.textContent = "Back to Homepage";
     homeButton.addEventListener("click", function () {
       window.location.href = "index.html";
     });
-    quizContent.appendChild(homeButton);
+    btnContainer.appendChild(homeButton);
+
+
+    quizContent.appendChild(summaryList);
+
+    localStorage.setItem(topic, score);
   }
 
   function renderQuestion() {
