@@ -80,6 +80,13 @@ ol {
     font-weight: bold;
 }
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .quiz-button {
     text-align: end;
     color: #0085FF;
