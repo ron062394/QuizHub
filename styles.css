@@ -137,3 +137,11 @@ ul li {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+
+.green {
+    color: rgb(8, 227, 8);
+}
+
+.orange {
+    color: rgb(246, 170, 29);
+}

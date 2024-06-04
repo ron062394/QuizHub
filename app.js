@@ -51,17 +51,24 @@ const topicCodes = {
     topics.forEach((topic) => {
       let score = localStorage.getItem(topic) || 0; // Retrieving score from localStorage, defaulting to 0 if null
       const id = topicIds[topic];
-
+    
       const scoreInfo = document.getElementById(id);
       if (scoreInfo) {
         scoreInfo.innerHTML = `
-            <span class="strong">COMPLETION RATE: ${
-              score === 0 ? "0%" : "100%"
-            }</span>
-            <span class="strong">SCORE: ${score}/10</span>
+            <span>COMPLETION RATE:
+              <span class="${score === 0 ? "orange" : "green"}">${
+                score === 0 ? "0%" : "100%"
+              }</span>
+            </span>
+            <span>SCORE:
+              <span class="strong ${score === 0 ? "orange" : "green"}">${score}/10</span>            
+            </span>
         `;
       }
     });
+    
+    
+    
   }
 
   retrieveScore();
