@@ -1,7 +1,7 @@
 const topicCodes = {
     "Mastering CLI": "CLI123",
     "Git & GitHub": "OCTOCAT",
-    HTML: "DOCTYPE",
+    "HTML": "DOCTYPE",
     "CSS Basics": "CSS101",
     "Intermediate CSS": "RWD201",
     "JavaScript Basics": "JSLINGO",
@@ -86,3 +86,4 @@ const topicCodes = {
 //     e.preventDefault();
 //   }
 // });
+
