@@ -39,13 +39,13 @@ function retrieveScore() {
   ];
 
   const topicIds = {
-    "Mastering CLI": "CLI123",
-    "Git & GitHub": "OCTOCAT",
-    HTML: "DOCTYPE",
-    "CSS Basics": "CSS101",
-    "Intermediate CSS": "RWD201",
-    "JavaScript Basics": "JSLINGO",
-    "DOM Manipulation": "JSDOM",
+    "Mastering CLI": "CLI",
+    "Git & GitHub": "GIT",
+    HTML: "HTML",
+    "CSS Basics": "CSS1",
+    "Intermediate CSS": "CSS2",
+    "JavaScript Basics": "JS",
+    "DOM Manipulation": "DOM",
   };
 
   topics.forEach((topic) => {
