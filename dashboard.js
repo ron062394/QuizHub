@@ -559,6 +559,7 @@ function loadQuiz(topic) {
 
 
   function showSummary() {
+    quizContent.classList.add("summary");
     quizContent.innerHTML = "<span></span>";
     const summaryList = document.createElement("ul");
     let score = 0;
@@ -572,36 +573,56 @@ function loadQuiz(topic) {
 
       // Create elements for question, user answer, correct answer, and status
       const questionParagraph = document.createElement("p");
-      questionParagraph.innerHTML = `<strong>Question:</strong> ${questionObj.question}`;
+      questionParagraph.innerHTML = `<strong>Question:</strong><br>${questionObj.question}`;
 
       const userAnswerParagraph = document.createElement("p");
-      userAnswerParagraph.innerHTML = `<strong>Your Answer:</strong> `;
+      userAnswerParagraph.innerHTML = `${isCorrect ? `<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="56.7969" cy="56.7969" r="56.7969" fill="#17A70A"/>
+<path d="M25.6484 61.8355L44.9677 77.6773C46.989 79.3347 49.9459 79.1555 51.7522 77.2661L88.3998 38.9336" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`:
+        `<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="56.7969" cy="56.7969" r="56.7969" fill="#D71717"/>
+<path d="M37.5547 77.6815L77.4041 36" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.9982 36.916L77.6797 76.7654" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <strong>Your Answer:</strong>  `}`;
       const userAnswerText = document.createTextNode(userAnswer);
       userAnswerParagraph.appendChild(userAnswerText);
 
+      //       const statusParagraph = document.createElement("span");
+      //       statusParagraph.innerHTML = ` ${isCorrect ? `<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+      // <circle cx="56.7969" cy="56.7969" r="56.7969" fill="#17A70A"/>
+      // <path d="M25.6484 61.8355L44.9677 77.6773C46.989 79.3347 49.9459 79.1555 51.7522 77.2661L88.3998 38.9336" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      // </svg>
+      // `:
+      //         `<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+      // <circle cx="56.7969" cy="56.7969" r="56.7969" fill="#D71717"/>
+      // <path d="M37.5547 77.6815L77.4041 36" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      // <path d="M35.9982 36.916L77.6797 76.7654" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      // </svg>
+      // `
+      //         } `;
+
       const correctAnswerParagraph = document.createElement("p");
-      correctAnswerParagraph.innerHTML = `<strong>Correct Answer:</strong> `;
+      correctAnswerParagraph.innerHTML = `< strong > Correct Answer:</strong > `;
       const correctAnswerText = document.createTextNode(questionObj.answer);
       correctAnswerParagraph.appendChild(correctAnswerText);
 
-      const statusParagraph = document.createElement("p");
-      statusParagraph.innerHTML = `<strong>Status:</strong> ${
-        isCorrect ? "Correct" : "Incorrect"
-      }`;
 
       // Append all paragraphs to the summary item
       summaryItem.appendChild(questionParagraph);
       summaryItem.appendChild(userAnswerParagraph);
 
-      summaryItem.appendChild(statusParagraph);
+      // summaryItem.appendChild(statusParagraph);
 
       summaryList.appendChild(summaryItem);
       summaryList.classList.add("summary-list");
     });
-    
+
     const scoreContainer = document.createElement("div");
     scoreContainer.classList.add("center")
-    
+
 
     const congratsElement = document.createElement("h2");
     congratsElement.textContent = `Congratulations!`
@@ -609,12 +630,12 @@ function loadQuiz(topic) {
     scoreContainer.appendChild(congratsElement);
 
     const congratsParag = document.createElement("p");
-    congratsParag.textContent = `You scored:`
+    congratsParag.textContent = `You scored: `
     scoreContainer.appendChild(congratsParag);
 
 
     const scoreElement = document.createElement("p");
-    scoreElement.textContent = `${score}/${selectedQuestions.length}`;
+    scoreElement.innerHTML = `<span class="final-score">${score}</span>/${selectedQuestions.length}`;
     scoreContainer.appendChild(scoreElement);
 
     quizContent.appendChild(scoreContainer);
@@ -716,19 +737,19 @@ if (topic) {
 
 // Prevent Inspect Element
 
-// document.addEventListener("contextmenu", function (e) {
-//     e.preventDefault();
-// });
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
 
-// document.addEventListener("keydown", function (e) {
-//     if (
-//         e.keyCode == 123 ||
-//         (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
-//         (e.ctrlKey && e.keyCode == 85)
-//     ) {
-//         e.preventDefault();
-//     }
-// });
+document.addEventListener("keydown", function (e) {
+    if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
+        (e.ctrlKey && e.keyCode == 85)
+    ) {
+        e.preventDefault();
+    }
+});
 
 // Prevent Copy Paste
 
