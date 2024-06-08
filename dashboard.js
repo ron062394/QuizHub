@@ -648,7 +648,9 @@ function loadQuiz(topic) {
     retakeButton.addEventListener("click", function () {
       currentQuestionIndex = 0;
       userAnswers.length = 0;
+      quizContent.classList.remove("summary")
       renderQuestion();
+
     });
     btnContainer.appendChild(retakeButton);
     btnContainer.classList.add("btns-container")
@@ -679,7 +681,6 @@ function loadQuiz(topic) {
     const choicesList = document.createElement("ul");
     currentQuestion.choices.forEach((choice, choiceIndex) => {
       const choiceElement = document.createElement("li");
-      choiceElement.classList.add("choice-element")
       const choiceInput = document.createElement("input");
       choiceInput.type = "radio";
       choiceInput.name = `question${currentQuestionIndex}`;
@@ -735,6 +736,7 @@ if (topic) {
 } else {
   document.getElementById("quiz-title").innerText = "No topic selected";
 }
+
 
 // // Prevent Inspect Element
 

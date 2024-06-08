@@ -255,7 +255,11 @@ ul li input {
 	background: #000 !important;
 }
 
-
+ul li:hover label,
+ul li input:checked+label {
+	color: #063d71 !important;
+	font-weight: 600;
+}
 
 
 .summary .center h2 {
@@ -336,6 +340,7 @@ ul li input {
 
 }
 
+
 .summary-list li p {
 	margin: 0;
 	width: 100%;
@@ -345,9 +350,6 @@ ul li input {
 	width: 100%;
 }
 
-.choice-element:hover {
-	font-weight: bold;
-}
 
 .no-select {
 	user-select: none;
