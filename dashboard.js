@@ -679,6 +679,7 @@ function loadQuiz(topic) {
     const choicesList = document.createElement("ul");
     currentQuestion.choices.forEach((choice, choiceIndex) => {
       const choiceElement = document.createElement("li");
+      choiceElement.classList.add("choice-element")
       const choiceInput = document.createElement("input");
       choiceInput.type = "radio";
       choiceInput.name = `question${currentQuestionIndex}`;
@@ -735,21 +736,21 @@ if (topic) {
   document.getElementById("quiz-title").innerText = "No topic selected";
 }
 
-// Prevent Inspect Element
+// // Prevent Inspect Element
 
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
+// document.addEventListener("contextmenu", function (e) {
+//     e.preventDefault();
+// });
 
-document.addEventListener("keydown", function (e) {
-    if (
-        e.keyCode == 123 ||
-        (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
-        (e.ctrlKey && e.keyCode == 85)
-    ) {
-        e.preventDefault();
-    }
-});
+// document.addEventListener("keydown", function (e) {
+//     if (
+//         e.keyCode == 123 ||
+//         (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
+//         (e.ctrlKey && e.keyCode == 85)
+//     ) {
+//         e.preventDefault();
+//     }
+// });
 
 // Prevent Copy Paste
 

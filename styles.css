@@ -345,6 +345,10 @@ ul li input {
 	width: 100%;
 }
 
+.choice-element:hover {
+	font-weight: bold;
+}
+
 .no-select {
 	user-select: none;
 	-webkit-user-select: none;
