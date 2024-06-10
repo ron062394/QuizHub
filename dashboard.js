@@ -50,9 +50,9 @@ function loadQuiz(topic) {
         answer: "touch",
       },
       {
-        question: "What command is used to move or rename a file in CLI?",
-        choices: ["mv", "move", "rename", "cp"],
-        answer: "mv",
+        question: "What command is used to remove a directory in CLI?",
+        choices: ["clrdir", "rmdir", "deldir", "clear"],
+        answer: "rmdir",
       },
       {
         question: "How do you display the current directory path in CLI?",
