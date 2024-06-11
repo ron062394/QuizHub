@@ -74,7 +74,7 @@ function loadQuiz(topic) {
           "Both statement are false.",
           "Both statement are true.",
         ],
-        answer: "Both statement are true.",
+        answer: "Statement B is true, statement A is false.",
       },
     ],
     "Git & GitHub": [
