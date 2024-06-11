@@ -130,8 +130,8 @@ function loadQuiz(topic) {
           "What command is used to switch to a different branch in Git?",
         choices: [
           "git switch",
-          "git checkout",
-          "git branch-switch",
+          "git shift",
+          "git change",
           "git branch",
         ],
         answer: "git checkout",
