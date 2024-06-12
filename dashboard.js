@@ -126,8 +126,7 @@ function loadQuiz(topic) {
         answer: "git branch",
       },
       {
-        question:
-          "What command is used to switch to a different branch in Git?",
+        question: "What command is used to switch to a different branch in Git?",
         choices: [
           "git switch",
           "git shift",
@@ -136,6 +135,7 @@ function loadQuiz(topic) {
         ],
         answer: "git switch",
       },
+      
       {
         question: "How do you merge two branches in Git?",
         choices: ["git merge", "git join", "git combine", "git connect"],
