@@ -134,7 +134,7 @@ function loadQuiz(topic) {
           "git change",
           "git branch",
         ],
-        answer: "git checkout",
+        answer: "git switch",
       },
       {
         question: "How do you merge two branches in Git?",
