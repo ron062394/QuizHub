@@ -377,8 +377,8 @@ function loadQuiz(topic) {
       {
         question:
           "In Flexbox, which property is used to align items along the cross axis?",
-        choices: ["@align-items", "device-width", "width", "responsive"],
-        answer: "@media",
+        choices: ["align-items", "justify-content", "flex-direction", "align-content"],
+        answer: "align-items",
       },
     ],
     "JavaScript Basics": [
