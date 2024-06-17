@@ -365,19 +365,19 @@ function loadQuiz(topic) {
         answer: "position",
       },
       {
-        question: "What is the purpose of media queries in CSS?",
+        question: "Which property is used to define the space between grid items?",
         choices: [
-          "To define keyframe animations",
-          "To specify the size of grid columns",
-          "To apply styles based on the device's characteristics",
-          "To create flexible layouts with rows and columns",
+          "grid-gap",
+          "grid-spacing",
+          "grid-margin",
+          "grid-padding",
         ],
-        answer: "To apply styles based on the device's characteristics",
+        answer: "grid-gap",
       },
       {
         question:
-          "Which CSS property is used to define styles for a specific range of device widths?",
-        choices: ["@media", "device-width", "width", "responsive"],
+          "In Flexbox, which property is used to align items along the cross axis?",
+        choices: ["@align-items", "device-width", "width", "responsive"],
         answer: "@media",
       },
     ],
