@@ -446,6 +446,12 @@ function loadQuiz(topic) {
         choices: [".pop()", ".push()", ".shift()", ".unshift()"],
         answer: ".pop()",
       },
+      {
+        question:
+          "What is the default value of an uninitialized variable in JavaScript?",
+        choices: ["null", "0", "undefined", "NaN"],
+        answer: "undefined",
+      },
     ],
 
     "DOM Manipulation": [
