@@ -399,7 +399,7 @@ function loadQuiz(topic) {
         answer: "const",
       },
       {
-        question: "Which symbol is used for comments in JavaScript?",
+        question: "Which symbol is used for single line comments in JavaScript?",
         choices: ["//", "/* */", "<!-- -->", "#"],
         answer: "//",
       },
@@ -426,9 +426,9 @@ function loadQuiz(topic) {
       },
       {
         question:
-          "Which function is used to parse a string to an integer in JavaScript?",
-        choices: ["parseInt()", "parseFloat()", "Number()", "int()"],
-        answer: "parseInt()",
+          "Which operator is used to compare both value and type in JavaScript?",
+        choices: ["==", "===", "!=", "!=="],
+        answer: "===",
       },
       {
         question: "What does the 'typeof' operator return in JavaScript?",
@@ -567,6 +567,7 @@ function loadQuiz(topic) {
       const summaryItem = document.createElement("li");
       const userAnswer = userAnswers[index];
       const isCorrect = userAnswer === questionObj.answer;
+      
       if (isCorrect) {
         score++;
       }
