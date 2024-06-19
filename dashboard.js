@@ -487,7 +487,7 @@ function loadQuiz(topic) {
         answer: "Returns the text content of an element",
       },
       {
-        question: "Which method is used to add a new HTML element to the DOM?",
+        question: "Which method is used to create a new HTML element to the DOM?",
         choices: [
           "createElement()",
           "appendChild()",
