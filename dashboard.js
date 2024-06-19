@@ -520,7 +520,7 @@ function loadQuiz(topic) {
       },
       {
         question:
-          "What is the purpose of the 'innerHTML' property in JavaScript?",
+          "What is the purpose of the 'textContent' property in JavaScript?",
         choices: [
           "To get the text content of an element",
           "To set the text content of an element",
