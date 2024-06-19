@@ -532,8 +532,8 @@ function loadQuiz(topic) {
       {
         question:
           "Which method is used to remove an HTML element from the DOM?",
-        choices: ["remove()", "deleteElement()", "detach()", "removeChild()"],
-        answer: "removeChild()",
+        choices: ["remove()", "deleteElement()", "detach()", "reduce()"],
+        answer: "remove()",
       },
       {
         question: "What does the 'classList' property do in JavaScript?",
